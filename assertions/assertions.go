@@ -51,11 +51,11 @@ func ShouldHaveReceived(iFace interface{}, args ...interface{}) string {
 		return err.Error()
 	}
 	var methodName string
-	if stringVal, ok := args[0].(string); !ok {
+	if stringVal, ok := args[0].(string); ok {
+		methodName = stringVal
+	} else {
 		typ := reflect.TypeOf(iFace)
 		return fmt.Sprintf("Argument 0 (methodName) should be a string. (was %s)", typ.Name())
-	} else {
-		methodName = stringVal
 	}
 
 	passed := m.AssertCalled(t, methodName, args[1:]...)
@@ -82,15 +82,15 @@ func ShouldHaveReceivedN(iFace interface{}, args ...interface{}) string {
 	}
 
 	if len(args) < 2 {
-		return fmt.Sprint("Recived less that the expected 2 arguments")
+		return fmt.Sprint("Recieved less that the expected 2 arguments")
 	}
 
 	var methodName string
-	if stringVal, ok := args[0].(string); !ok {
+	if stringVal, ok := args[0].(string); ok {
+		methodName = stringVal
+	} else {
 		typ := reflect.TypeOf(iFace)
 		return fmt.Sprintf("Argument 0 (methodName) should be a string. (was %s)", typ.Name())
-	} else {
-		methodName = stringVal
 	}
 
 	var times int
@@ -124,11 +124,11 @@ func ShouldNotHaveReceived(iFace interface{}, args ...interface{}) string {
 		return err.Error()
 	}
 	var methodName string
-	if stringVal, ok := args[0].(string); !ok {
+	if stringVal, ok := args[0].(string); ok {
+		methodName = stringVal
+	} else {
 		typ := reflect.TypeOf(iFace)
 		return fmt.Sprintf("Argument 0 (methodName) should be a string. (was %s)", typ.Name())
-	} else {
-		methodName = stringVal
 	}
 
 	passed := m.AssertNotCalled(t, methodName, args[1:]...)

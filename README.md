@@ -34,7 +34,7 @@ func TestExampleMock(t *testing.T)	{
 		Convey("When Bar is called", func() {
 			mock.Bar()
 			Convey("Assert Bar is called", func() {
-				So(mock, ShouldHaveReceived, "A")
+				So(mock, ShouldHaveReceived, "Bar")
 			})
 		})
 	})

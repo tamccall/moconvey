@@ -42,8 +42,7 @@ func getMock(iFace interface{}) (mock.Mock, error) {
 //
 // See Also
 //
-// https://github.com/smartystreets/goconvey/wiki/Assertions
-//
+// https://github.com/smartystreets/goconvey/wiki/Custom-Assertions
 func ShouldHaveReceived(iFace interface{}, args ...interface{}) string {
 	t := new(fakeT)
 	m, err := getMock(iFace)
@@ -73,7 +72,7 @@ func ShouldHaveReceived(iFace interface{}, args ...interface{}) string {
 //
 // See Also
 //
-// https://github.com/smartystreets/goconvey/wiki/Assertions
+// https://github.com/smartystreets/goconvey/wiki/Custom-Assertions
 func ShouldHaveReceivedN(iFace interface{}, args ...interface{}) string {
 	t := new(fakeT)
 	m, err := getMock(iFace)
@@ -116,7 +115,7 @@ func ShouldHaveReceivedN(iFace interface{}, args ...interface{}) string {
 //
 // See Also
 //
-// https://github.com/smartystreets/goconvey/wiki/Assertions
+// https://github.com/smartystreets/goconvey/wiki/Custom-Assertions
 func ShouldNotHaveReceived(iFace interface{}, args ...interface{}) string {
 	t := new(fakeT)
 	m, err := getMock(iFace)
@@ -146,7 +145,7 @@ func ShouldNotHaveReceived(iFace interface{}, args ...interface{}) string {
 //
 // See Also
 //
-// https://github.com/smartystreets/goconvey/wiki/Assertions
+// https://github.com/smartystreets/goconvey/wiki/Custom-Assertions
 func HadExpectationsMet(iFace interface{}, args ...interface{}) string {
 	m, err := getMock(iFace)
 	if err != nil {

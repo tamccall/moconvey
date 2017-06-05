@@ -82,7 +82,7 @@ func ShouldHaveReceivedN(iFace interface{}, args ...interface{}) string {
 	}
 
 	if len(args) < 2 {
-		return fmt.Sprint("Recieved less that the expected 2 arguments")
+		return fmt.Sprint("Received less that the expected 2 arguments")
 	}
 
 	var methodName string

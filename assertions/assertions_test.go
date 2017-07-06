@@ -17,7 +17,7 @@ func ExampleHadExpectationsMet() {
 			Convey("After we call it", func() {
 				mock.Bar()
 				Convey("Its expectations are met", func() {
-					So(mock, HadExpectationsMet)
+					So(mock, ShouldHaveExpectationsMet)
 				})
 			})
 		})
@@ -32,7 +32,7 @@ func TestHadExpectationsMet(t *testing.T) {
 			Convey("After we call it", func() {
 				mock.Bar()
 				Convey("Its expectations are met", func() {
-					So(mock, HadExpectationsMet)
+					So(mock, ShouldHaveExpectationsMet)
 				})
 			})
 		})

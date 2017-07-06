@@ -123,14 +123,14 @@ func ShouldNotHaveReceived(iFace interface{}, args ...interface{}) string {
 	return testPassedMessage
 }
 
-// HadExpectationsMet is a goconvey style assertion.
+// ShouldHaveExpectationsMet is a goconvey style assertion.
 // It is similar to https://godoc.org/github.com/stretchr/testify/mock#Mock.AssertExpectations, and asserts that
 // everything specified with On and Return was in fact called as expected.
 //
 // See Also
 //
 // https://github.com/smartystreets/goconvey/wiki/Custom-Assertions
-func HadExpectationsMet(iFace interface{}, args ...interface{}) string {
+func ShouldHaveExpectationsMet(iFace interface{}, args ...interface{}) string {
 	m, err := getMock(iFace)
 	if err != nil {
 		return err.Error()

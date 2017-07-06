@@ -1,11 +1,11 @@
 package assertions
 
 import (
+	"errors"
 	"fmt"
 	"reflect"
 
 	"github.com/tamccall/moconvey/testify"
-	"errors"
 )
 
 const (

@@ -4,36 +4,20 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/stretchr/testify/mock"
+	"github.com/tamccall/moconvey/testify"
+	"errors"
 )
 
 const (
 	testPassedMessage = ""
 )
 
-func getMock(iFace interface{}) (mock.Mock, error) {
-	if m, ok := iFace.(mock.Mock); ok {
+func getMock(iFace interface{}) (testify.Mock, error) {
+	if m, ok := iFace.(testify.Mock); !ok {
+		return nil, errors.New("Cannot get mock")
+	} else {
 		return m, nil
 	}
-
-	var out mock.Mock
-	iVal := reflect.ValueOf(iFace)
-	if iVal.Type().Kind() == reflect.Ptr {
-		return getMock(iVal.Elem().Interface())
-	}
-
-	if iVal.Type().Kind() == reflect.Struct && iVal.NumField() >= 1 {
-		v := iVal.Field(0)
-		if m, ok := v.Interface().(mock.Mock); ok {
-			out = m
-		} else {
-			return mock.Mock{}, fmt.Errorf("Could not get mock from interface %v. Had type %v", iFace, reflect.TypeOf(iFace))
-		}
-	} else {
-		return mock.Mock{}, fmt.Errorf("Could not get mock from interface %v. Had type %v", iFace, reflect.TypeOf(iFace))
-	}
-
-	return out, nil
 }
 
 // ShouldHaveReceived is a goconvey style assertion.

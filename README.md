@@ -1,5 +1,6 @@
 # moconvey
 [![Go Report Card](https://goreportcard.com/badge/github.com/tamccall/moconvey)](https://goreportcard.com/report/github.com/tamccall/moconvey)
+[![GoDoc](https://godoc.org/github.com/tamccall/moconvey?status.svg)](http://godoc.org/github.com/github.com/tamccall/moconvey)
 
 moconvey is a package that aims to better integrate the [mocks](https://godoc.org/github.com/stretchr/testify/mock)
 of [stretchr/testify](https://github.com/stretchr/testify) and the testing framework that is [goconvey](https://github.com/smartystreets/goconvey)

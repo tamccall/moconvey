@@ -3,6 +3,7 @@ package assertions
 import (
 	"bytes"
 	"fmt"
+	"github.com/stretchr/testify/assert"
 )
 
 // fakeT is a struct intended to match the mock packages TestingT interface
@@ -28,3 +29,5 @@ func (t *fakeT) FailNow() {
 func (t *fakeT) error() string {
 	return t.buf.String()
 }
+
+var _ assert.TestingT = (*fakeT)(nil)

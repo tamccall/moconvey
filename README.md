@@ -1,4 +1,5 @@
 # moconvey
+[![Build Status](https://travis-ci.org/nukosuke/go-zendesk.svg?branch=master)](https://travis-ci.org/nukosuke/go-zendesk)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tamccall/moconvey)](https://goreportcard.com/report/github.com/tamccall/moconvey)
 [![GoDoc](https://godoc.org/github.com/tamccall/moconvey?status.svg)](http://godoc.org/github.com/github.com/tamccall/moconvey)
 

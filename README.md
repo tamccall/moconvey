@@ -1,7 +1,7 @@
 # moconvey
 [![Build Status](https://travis-ci.org/nukosuke/go-zendesk.svg?branch=master)](https://travis-ci.org/nukosuke/go-zendesk)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tamccall/moconvey)](https://goreportcard.com/report/github.com/tamccall/moconvey)
-[![GoDoc](https://godoc.org/github.com/tamccall/moconvey?status.svg)](https://godoc.org/github.com/tamccall/moconvey)
+[![GoDoc](https://godoc.org/github.com/tamccall/moconvey?status.svg)](https://godoc.org/github.com/tamccall/moconvey/assertions)
 
 moconvey is a package that aims to better integrate the [mocks](https://godoc.org/github.com/stretchr/testify/mock)
 of [stretchr/testify](https://github.com/stretchr/testify) and the testing framework that is [goconvey](https://github.com/smartystreets/goconvey)

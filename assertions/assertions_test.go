@@ -97,7 +97,7 @@ func TestShouldHaveReceivedN(t *testing.T) {
 					So(mock, ShouldHaveReceivedN, "Bar", 2)
 				})
 
-				Convey("But it not 3 times", func() {
+				Convey("But not 3 times", func() {
 					msg := ShouldHaveReceived(mock, "Bar", 3)
 					So(msg, ShouldNotEqual, testPassedMessage)
 				})

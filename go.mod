@@ -1,6 +1,8 @@
 module github.com/tamccall/moconvey
 
 require (
-	github.com/smartystreets/goconvey v0.0.0-20190306220146-200a235640ff
+	github.com/smartystreets/goconvey v1.6.4
 	github.com/stretchr/testify v1.3.0
 )
+
+go 1.13
